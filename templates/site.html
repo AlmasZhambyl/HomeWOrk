@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Публикация платных объявлений</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ad-form {
+            text-align: left;
+        }
+
+        .ad-form h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .ad-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ad-form input[type="text"],
+        .ad-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .ad-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .ad-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Публикация платных объявлений</h1>
+    </header>
+    <main>
+        <section class="ad-form">
+            <h2>Форма публикации объявления</h2>
+            <form action="submit_ad.php" method="POST">
+                <label for="title">Заголовок объявления:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Описание объявления:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="price">Цена:</label>
+                <input type="text" id="price" name="price" required>
+
+                <button type="submit">Опубликовать объявление</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Ваше веб-приложение для публикации объявлений</p>
+    </footer>
+</body>
+</html>

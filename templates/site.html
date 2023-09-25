@@ -3,101 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Публикация платных объявлений</title>
+    <title>Объявления</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
         }
 
         header {
             background-color: #333;
             color: #fff;
+            padding: 10px;
             text-align: center;
-            padding: 20px 0;
         }
 
-        header h1 {
+        h1 {
             margin: 0;
-            font-size: 2em;
         }
 
-        main {
-            max-width: 800px;
+        .container {
+            max-width: 960px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .ad-form {
-            text-align: left;
-        }
-
-        .ad-form h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .ad-form label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .ad-form input[type="text"],
-        .ad-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .ad-form button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+        .ad {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
         }
 
-        .ad-form button:hover {
-            background-color: #555;
+        .ad h2 {
+            font-size: 24px;
+            margin: 0;
         }
 
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
+        .ad p {
+            font-size: 16px;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Публикация платных объявлений</h1>
+        <h1>Объявления</h1>
     </header>
-    <main>
-        <section class="ad-form">
-            <h2>Форма публикации объявления</h2>
-            <form action="submit_ad.php" method="POST">
-                <label for="title">Заголовок объявления:</label>
-                <input type="text" id="title" name="title" required>
-
-                <label for="description">Описание объявления:</label>
-                <textarea id="description" name="description" required></textarea>
-
-                <label for="price">Цена:</label>
-                <input type="text" id="price" name="price" required>
-
-                <button type="submit">Опубликовать объявление</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Ваше веб-приложение для публикации объявлений</p>
-    </footer>
+    <div class="container">
+        <div class="ad">
+            <h2>Заголовок объявления 1</h2>
+            <p>Описание объявления 1.</p>
+        </div>
+        <div class="ad">
+            <h2>Заголовок объявления 2</h2>
+            <p>Описание объявления 2.</p>
+        </div>
+                <a class="add" href="{% url 'da' %}">Добавить объявление</a>
+    </div>
 </body>
 </html>

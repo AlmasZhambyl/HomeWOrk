@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django_site import views
+from .views import plus
 
 urlpatterns = [
     path('', views.site),
+    path('da', plus, name='da'),
 ]
